@@ -1,0 +1,68 @@
+.container-space{
+  padding-top: 50px;
+  padding-left: 100px;
+}
+form{
+  .error{
+    
+      color: #ff0000;
+    
+  }
+}
+
+.progressbar{
+  width: 100%;
+  margin-top: 50px;
+  
+  ul{
+    counter-reset: step;
+  
+    li{
+      list-style: none;
+      float: left;
+      width: 16.25%;
+      position: relative;
+      color: red;
+      text-align: center;
+     
+      
+      &::before{
+        content: counter(step);
+        counter-increment: step;
+        width: 30px;
+        height: 30px;
+        border:2px solid #ddd;
+        display: block;
+        text-align: center;
+        margin: 0 auto 10px auto;
+        border-radius: 50px;
+      
+      }
+
+      &::after{
+        content: '';
+        position: absolute;
+        top:15px;
+        left: -75px;
+        border: 2px solid #ddd;
+        width: 85%;
+        z-index: -1;
+        
+      }
+      &:first-child::after{
+        content: none;
+      }
+      &.active{
+        color: chartreuse;
+        &::before{
+          border-color: chartreuse;
+        }
+        &::after{
+          border-color: chartreuse;
+        }
+      }
+      
+    }
+
+  }
+}

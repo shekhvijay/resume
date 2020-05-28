@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Resume Meker</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+</head>
+<body>
+  <div class="container" style="width: 100%;">
+
+    <!--Start progressbar -->
+    <div class="row"> 
+      <div class="progressbar">
+        <ul class="step-progress-bar">
+          <li class="active header">Header</li>
+          <li class="eduation" >Education</li>
+          <li class="skill">Skill</li>
+          <li class="expetience">Experience</li>
+          <li>summery</li>
+          <li>Finalize</li>
+        </ul>
+      </div>
+       <!--End progressbar -->
+    </div>
+  </div>
+
+<form action="" id="myform">
+  <section id="form">
+    <div class="container">
+      <div class="container-space">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="personal-detials">
+              <div class="row row-one">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="" class="control-label">FirstName</label>
+                    <input type="text" placeholder="FirstName" class="form-control" name="firstname">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="" class="control-label">Surname</label>
+                    <input type="text" placeholder="Surname" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="" class="control-label">Email</label>
+                    <input type="email" placeholder="Email" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="" class="control-label">Phone</label>
+                    <input type="text" placeholder="Phone" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="" class="control-label">City</label>
+                    <input type="text" placeholder="City" class="form-control">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="" class="control-label">State</label>
+                    <input type="text" placeholder="State" class="form-control">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="" class="control-label">Zipcode</label>
+                    <input type="text" placeholder="Zipcode" class="form-control">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+  
+          </div>
+        </div>
+        <!-- education section -->
+        <div class="educaton">
+            <div class="row">
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="" class="control-label">School name</label>
+                      <input type="text" class="form-control" placeholder="School name" id="schoolName">
+                  </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="" class="control-label">School Location</label>
+                      <input type="text" class="form-control" placeholder="School Location" name="schoolLocation">
+                  </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="" class="control-label">Degree</label>
+                      <input type="text" class="form-control" placeholder="Degree" name="degree">
+                  </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="" class="control-label">Field of Study</label>
+                      <input type="text" class="form-control" placeholder="Field of Study" name="fieldOfStudy">
+                  </div>
+              </div>
+            </div>
+            <div class="row gd">
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="" class="control-label">Graduation Date</label>
+                      <input type="date" class="form-control" placeholder="Graduation Date" name="fieldOfStudy" id="gd">
+                  </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" value="unchecked" id="check">I am still enrolled
+                    </label>
+                  </div>
+              </div>
+            </div>
+        </div>
+        <!-- education section -->
+       
+
+       
+      </div>
+    </div>
+    
+  </section>
+  
+
+  <section id="btns">
+    <div class="container">
+      <div class="container-space">   
+      
+          <div class="btns-group">
+            <div class="next-btn float-right">
+              <button class="btn btn-primary" value="1" id="nextbtn" type="submit">Next</button>
+            </div>
+            <div class="back-btn ">
+              <button class="btn btn-primary" value="0" id="backbtn">Back</button>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+  
+</form>
+  
+  <!-- End Personal-details section -->
+  
+  
+
+  
+
+  <script>
+    $(document).ready(function(){
+
+      
+      $(".educaton").hide();
+      $(".back-btn").hide();
+      $("#check").click(function(){
+        $(".gd").toggle();
+      })
+
+      /* next button click */
+      $("#nextbtn").click(function(){ 
+          
+     /*  var nextbtn=$("#nextbtn").val();
+      if(nextbtn > 1)
+      {
+        $(".back-btn").show(); 
+      }
+      else{
+        $(".back-btn").hide(); 
+      } */
+
+        
+       /*  myform event */
+        /* var e=$("#myform").validate({
+          rules:{
+            firstname:'required',
+            schoolName:'required'
+
+          },
+          messages: {
+            firstname: 'This field is required',
+            schoolName: 'This field is required',
+            
+          },
+          submitHandler: function(form) {
+                //form.submit();
+                $(".personal-detials").hide();
+                $(".educaton").show();
+                $("#nextbtn").val(2);
+                $(".back-btn").show(); 
+
+          }
+          
+        }) */
+
+        
+      
+
+
+
+
+      })
+      /*end next button clicl */
+
+
+    })
+
+  </script>
+
+</body>
+</html>
