@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Online Resume Meker</title>
   <link rel="stylesheet" href="css/style.css">
-
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -28,8 +27,8 @@
       <div class="progressbar">
         <ul class="step-progress-bar">
           <li class="active header">Header</li>
-          <li class="eduation" >Education</li>
-          <li class="skill">Skill</li>
+          <li id="education" >Education</li>
+          <li id="skill">Skill</li>
           <li class="expetience">Experience</li>
           <li>summery</li>
           <li>Finalize</li>
@@ -39,24 +38,26 @@
     </div>
   </div>
 
-<form action="" id="myform">
+
   <section id="form">
     <div class="container">
       <div class="container-space">
         <div class="row">
           <div class="col-md-6">
-            <div class="personal-detials">
+            <div id="personal-detials">
               <div class="row row-one">
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="" class="control-label">FirstName</label>
-                    <input type="text" placeholder="FirstName" class="form-control" name="firstname">
+                    <input type="text" placeholder="FirstName" class="form-control" name="firstName" id="firstName">
+                    <span id="error_firstname" class="text-danger"></span>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="" class="control-label">Surname</label>
-                    <input type="text" placeholder="Surname" class="form-control">
+                    <input type="text" placeholder="Surname" class="form-control" id="surName">
+                    <span id="error_surname" class="text-danger"></span>
                   </div>
                 </div>
               </div>
@@ -64,7 +65,8 @@
                 <div class="col-md-12">
                   <div class="form-group">
                     <label for="" class="control-label">Email</label>
-                    <input type="email" placeholder="Email" class="form-control">
+                    <input type="email" placeholder="Email" class="form-control" id="email">
+                    <span id="error_email" class="text-danger"></span>
                   </div>
                 </div>
               </div>
@@ -72,7 +74,8 @@
                 <div class="col-md-12">
                   <div class="form-group">
                     <label for="" class="control-label">Phone</label>
-                    <input type="text" placeholder="Phone" class="form-control">
+                    <input type="text" placeholder="Phone" class="form-control" id="phone">
+                    <span id="error_phone" class="text-danger"></span>
                   </div>
                 </div>
               </div>
@@ -80,19 +83,22 @@
                 <div class="col-md-4">
                   <div class="form-group">
                     <label for="" class="control-label">City</label>
-                    <input type="text" placeholder="City" class="form-control">
+                    <input type="text" placeholder="City" class="form-control" id="city">
+                    <span id="error_city" class="text-danger"></span>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="form-group">
                     <label for="" class="control-label">State</label>
-                    <input type="text" placeholder="State" class="form-control">
+                    <input type="text" placeholder="State" class="form-control" id="state">
+                    <span id="error_state" class="text-danger"></span>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="form-group">
                     <label for="" class="control-label">Zipcode</label>
-                    <input type="text" placeholder="Zipcode" class="form-control">
+                    <input type="text" placeholder="Zipcode" class="form-control" id="zipcode">
+                    <span id="error_zipcode" class="text-danger"></span>
                   </div>
                 </div>
               </div>
@@ -103,12 +109,13 @@
           </div>
         </div>
         <!-- education section -->
-        <div class="educaton">
+        <div class="education">
             <div class="row">
               <div class="col-md-6">
                   <div class="form-group">
                       <label for="" class="control-label">School name</label>
                       <input type="text" class="form-control" placeholder="School name" id="schoolName">
+                      <span id="error_schoolName" class="text-danger"></span>
                   </div>
               </div>
             </div>
@@ -116,7 +123,8 @@
               <div class="col-md-6">
                   <div class="form-group">
                       <label for="" class="control-label">School Location</label>
-                      <input type="text" class="form-control" placeholder="School Location" name="schoolLocation">
+                      <input type="text" class="form-control" placeholder="School Location" name="schoolLocation" id="schoolLocation">
+                      <span id="error_schoolLoc" class="text-danger"></span>
                   </div>
               </div>
             </div>
@@ -124,7 +132,8 @@
               <div class="col-md-6">
                   <div class="form-group">
                       <label for="" class="control-label">Degree</label>
-                      <input type="text" class="form-control" placeholder="Degree" name="degree">
+                      <input type="text" class="form-control" placeholder="Degree" name="degree" id="degree">
+                      <span id="error_degree" class="text-danger"></span>
                   </div>
               </div>
             </div>
@@ -132,15 +141,17 @@
               <div class="col-md-6">
                   <div class="form-group">
                       <label for="" class="control-label">Field of Study</label>
-                      <input type="text" class="form-control" placeholder="Field of Study" name="fieldOfStudy">
+                      <input type="text" class="form-control" placeholder="Field of Study" name="fieldOfStudy" id="fieldOfStudy">
+                      <span id="error_fieldOfStudy" class="text-danger"></span>
                   </div>
               </div>
             </div>
             <div class="row gd">
               <div class="col-md-6">
                   <div class="form-group">
-                      <label for="" class="control-label">Graduation Date</label>
+                      <label for="" class="control-label">Graduation End Date </label>
                       <input type="date" class="form-control" placeholder="Graduation Date" name="fieldOfStudy" id="gd">
+                      <span id="error_gd" class="text-danger"></span>
                   </div>
               </div>
             </div>
@@ -153,9 +164,86 @@
                   </div>
               </div>
             </div>
+            <div class="row" style="padding-top:10px;">
+              <div class="col-md-6">
+                  <div class="addDegree">
+                    <button class="btn btn-warning" id="addDegree">
+                      <i class="fa fa-plus" aria-hidden="true"></i>  Add More Education
+                    </button>
+                  </div>
+              </div>
+            </div>
         </div>
-        <!-- education section -->
-       
+        <!-- copy of education -->
+        <div class="education-copy">
+          <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="" class="control-label">School name</label>
+                    <input type="text" class="form-control" placeholder="School name" id="schoolName">
+                    <span id="error_schoolName" class="text-danger"></span>
+                </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="" class="control-label">School Location</label>
+                    <input type="text" class="form-control" placeholder="School Location" name="schoolLocation" id="schoolLocation">
+                    <span id="error_schoolLoc" class="text-danger"></span>
+                </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="" class="control-label">Degree</label>
+                    <input type="text" class="form-control" placeholder="Degree" name="degree" id="degree">
+                    <span id="error_degree" class="text-danger"></span>
+                </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="" class="control-label">Field of Study</label>
+                    <input type="text" class="form-control" placeholder="Field of Study" name="fieldOfStudy" id="fieldOfStudy">
+                    <span id="error_fieldOfStudy" class="text-danger"></span>
+                </div>
+            </div>
+          </div>
+          <div class="row gd">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="" class="control-label">Graduation End Date </label>
+                    <input type="date" class="form-control" placeholder="Graduation Date" name="fieldOfStudy" id="gd">
+                    <span id="error_gd" class="text-danger"></span>
+                </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="unchecked" id="check">I am still enrolled
+                  </label>
+                </div>
+            </div>
+          </div>
+          
+      </div>
+        <!--End education section -->
+
+         <!--start Skill section -->
+       <div id="skillpanel">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="" class="control-label">School Location</label>
+              <input type="text" class="form-control" placeholder="School Location" name="schoolLocation" id="schoolLocation">
+              <span id="error_schoolLoc" class="text-danger"></span>
+            </div>
+          </div>
+       </div>
 
        
       </div>
@@ -170,9 +258,9 @@
       
           <div class="btns-group">
             <div class="next-btn float-right">
-              <button class="btn btn-primary" value="1" id="nextbtn" type="submit">Next</button>
+              <button class="btn btn-primary" value="1" id="nextbtn" >Next</button>
             </div>
-            <div class="back-btn ">
+            <div id="back-btn">
               <button class="btn btn-primary" value="0" id="backbtn">Back</button>
             </div>
           </div>
@@ -181,7 +269,7 @@
     </div>
   </section>
   
-</form>
+
   
   <!-- End Personal-details section -->
   
@@ -192,60 +280,248 @@
   <script>
     $(document).ready(function(){
 
-      
-      $(".educaton").hide();
-      $(".back-btn").hide();
+      $("#skillpanel").hide();
+      $(".education-copy").hide();
+      $(".education").show();
+     // $("#backbtn").hide();
+     
+      $("#personal-detials").hide();
       $("#check").click(function(){
         $(".gd").toggle();
       })
+    
+     $("#nextbtn").click(function(){
+       var error="0"; 
+       var next_btn_value= $(this).val();
+       alert(next_btn_value);
+       var error_text="";
+       if(next_btn_value==1 ){
+        var firstName = $("#firstName").val();
+        var surName = $("#surName").val();
+        var email = $("#email").val();
+        var phone = $("#phone").val();
+        var city = $("#city").val();
+        var state = $("#state").val();
+        var zipcode = $("#zipcode").val();
+        var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        var phoneno = /^\d{10}$/;
 
-      /* next button click */
-      $("#nextbtn").click(function(){ 
-          
-     /*  var nextbtn=$("#nextbtn").val();
-      if(nextbtn > 1)
-      {
-        $(".back-btn").show(); 
-      }
-      else{
-        $(".back-btn").hide(); 
-      } */
+          if(firstName==""){
+            error_text="Enter Firstname";
+              $("#error_firstname").html(error_text);
+              $("#error_firstname").addClass("has-error");
+              error="1";
+              
+          }
+          else{
+              $("#error_firstname").html("");
+              $("#error_firstname").removeClass("has-error");
+              error_text="";
+          }
 
-        
-       /*  myform event */
-        /* var e=$("#myform").validate({
-          rules:{
-            firstname:'required',
-            schoolName:'required'
+          if(surName==""){
+            error_text="Enter SurName";
+            $("#error_surname").html(error_text);
+              $("#error_surname").addClass("has-error");
+              error="1";   
+          }
+          else{
+            $("#error_surname").html("");
+              $("#error_surname").removeClass("has-error");
+              error_text="";
+          }
 
-          },
-          messages: {
-            firstname: 'This field is required',
-            schoolName: 'This field is required',
+          if(email=="" || !regex.test(email)){
+             error_text="Enter valid Email ";
+              $("#error_email").html(error_text);
+              $("#error_email").addClass("has-error");
+              error="1";
+            }
+          else{
+              $("#error_email").html("");
+              $("#error_email").removeClass("has-error");
+              error_text="";
             
-          },
-          submitHandler: function(form) {
-                //form.submit();
-                $(".personal-detials").hide();
-                $(".educaton").show();
-                $("#nextbtn").val(2);
-                $(".back-btn").show(); 
-
           }
           
-        }) */
+          if(!phone.match(/^\d{10}$/)){
+              error_text="Enter Phone valid";
+              $("#error_phone").html(error_text);
+              $("#error_phone").addClass("has-error");
+              error="1";
+          }
+          else{
+              $("#error_phone").html("");
+              $("#error_phone").removeClass("has-error");
+              error_text="";
+          }
 
-        
-      
+          if(city==""){
+              error_text="Enter City";
+              $("#error_city").html(error_text);
+              $("#error_city").addClass("has-error");
+              error="1";
+              
+          }
+          else{
+            $("#error_city").html("");
+              $("#error_city").removeClass("has-error");
+              error_text="";
+          }
+          if(state==""){
+              error_text="Enter State";
+              $("#error_state").html(error_text);
+              $("#error_state").addClass("has-error");
+              error="1";
+              
+          }
+          else{
+            $("#error_state").html("");
+              $("#error_state").removeClass("has-error");
+              error_text="";
+          }
+
+          if(zipcode==""){
+              error_text="Enter Zipcode";
+              $("#error_zipcode").html(error_text);
+              $("#error_zipcode").addClass("has-error");
+              error="1";
+              
+          }
+          else{
+            $("#error_zipcode").html("");
+              $("#error_zipcode").removeClass("has-error");
+              error_text="";
+          }
+
+          
+          if(error=="0"){
+            $("#nextbtn").val("2");
+            $(".education").show();
+            $("#backbtn").val("1").show();
+            $("#personal-detials").hide();
+            $("#education").addClass("active");
+
+          }
+       }
+
+       /* education part */
+        if(next_btn_value==2){
+          var p=$("#back-btn").val();
+          var schoolName = $("#schoolName").val();
+          var schoolLocation = $("#schoolLocation").val();
+          var degree = $("#degree").val();
+          var fieldOfStudy = $("#fieldOfStudy").val();
+          var gd = $("#gd").val();
 
 
+          if(schoolName==""){
+              error_text="Enter school Name";
+              $("#error_schoolName").html(error_text);
+              $("#error_schoolName").addClass("has-error");
+              error="1";
+              
+          }
+          else{
+              $("#error_schoolName").html("");
+              $("#error_schoolName").removeClass("has-error");
+              error_text="";
+          }
 
 
-      })
-      /*end next button clicl */
+          if(schoolLocation==""){
+              error_text="Enter school Location";
+              $("#error_schoolLoc").html(error_text);
+              $("#error_schoolLoc").addClass("has-error");
+              error="1";
+              
+          }
+          else{
+              $("#error_schoolLoc").html("");
+              $("#error_schoolLoc").removeClass("has-error");
+              error_text="";
+          }
+
+          if(degree==""){
+              error_text="Enter Degree";
+              $("#error_degree").html(error_text);
+              $("#error_degree").addClass("has-error");
+              error="1";
+              
+          }
+          else{
+              $("#error_degree").html("");
+              $("#error_degree").removeClass("has-error");
+              error_text="";
+          }
+
+          if(fieldOfStudy==""){
+              error_text="Enter Field Of Study";
+              $("#error_fieldOfStudy").html(error_text);
+              $("#error_fieldOfStudy").addClass("has-error");
+              error="1";
+              
+          }
+          else{
+              $("#error_fieldOfStudy").html("");
+              $("#error_fieldOfStudy").removeClass("has-error");
+              error_text="";
+          }
 
 
-    })
+          if(gd==""){
+              error_text="Enter Graducation Date";
+              $("#error_gd").html(error_text);
+              $("#error_gd").addClass("has-error");
+              error="1";
+              
+          }
+          else{
+              $("#error_gd").html("");
+              $("#error_gd").removeClass("has-error");
+              error_text="";
+          }
+
+          if(error=="0"){
+            $("#nextbtn").val("3");
+            $(".education").hide();
+            $("#backbtn").val("2");
+            $("#skill").addClass("active");
+
+          }
+
+
+        }
+     });
+
+     /* back button script */
+     $("#backbtn").click(function(){
+       var back_btn_val=$(this).val();
+        alert(back_btn_val);
+
+
+       if(back_btn_val==1){
+          $(".education").hide();
+          $("#backbtn").hide();
+          $("#personal-detials").show();
+          $("#education").removeClass("active")
+          $("#nextbtn").val("1");
+       }
+
+       if(back_btn_val==2){
+          $(".education").show();
+          $("#backbtn").val(1).show();
+          $("#skill").removeClass("active")
+          $("#nextbtn").val("2");
+       }
+     });
+     $("#addDegree").click(function(){
+       
+        $(".education-copy").clone().appendTo(".education");
+     });
+
+
+});
 
   </script>
 
